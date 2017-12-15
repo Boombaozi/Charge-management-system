@@ -35,5 +35,6 @@ public class datainfoc extends HttpServlet {
 			throws ServletException, IOException {
           		doGet(request,response);
 	}
+
 }
 
