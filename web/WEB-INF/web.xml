@@ -4,5 +4,24 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
            version="3.1">
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>test.Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/servlet/http</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>datainfoc</servlet-name>
+        <servlet-class>test.datainfoc</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>datainfoc</servlet-name>
+        <url-pattern>/servlet/datainfo</url-pattern>
+    </servlet-mapping>
 
 </web-app>
