@@ -28,18 +28,19 @@ public class datainfo {
 		rs = ps.executeQuery();
 		if (rs.next())
 		{
-			response.getWriter().write("Êı¾İ²»Îª¿Õ");
+			response.getWriter().write("æœ‰æ•°æ®");
 		}
 		else
 		{
 
-			response.getWriter().write("Êı¾İÎª¿Õ");
+			response.getWriter().write("æ— ");
 		}
 		while(rs.next()){
 			response.getWriter().write("<br/>");
 			response.getWriter().write(rs.getString(1)+" ");
 			response.getWriter().write(rs.getString(2)+" ");
 			response.getWriter().write(rs.getString(3)+" ");
+			response.getWriter().write("æœ€åä¿®æ”¹æ—¶é—´"+rs.getString(4)+" ");
 			response.getWriter().write("<br/>--------------------<br/>");
 		}
 					
