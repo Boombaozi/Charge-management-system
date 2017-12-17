@@ -8,7 +8,7 @@ public class user {
 
     static {
         datainfoc a = new datainfoc();
-        a.doGet();
+
 
 
 
