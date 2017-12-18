@@ -92,7 +92,10 @@
 
 
 			<li role="presentation" class="divider"></li>
-			<li><a href="login.jsp"><span class="glyphicon glyphicon-user"></span>管理员登录</a></li>
+			<li><a href="login.jsp"><span class="glyphicon glyphicon-user"></span>切换用户</a></li>
+			<li><a href="reg.jsp"><span class="glyphicon glyphicon-plus"></span>新增管理员</a></li>
+
+
 			<%
 				String a1="0";
 
@@ -103,14 +106,14 @@
 					if("lastAccessTime".equals(cookies[i].getName())){//判断当前Cookie中的name是否是想要的cookie
 						long l = Long.parseLong(cookies[i].getValue());//如果是想要的Cookie，则把Cookie中的value取出
 
-						a1=("你的最后访问时间为："+new Date(l).toLocaleString());//yyyy-MM-dd
+						a1=("上次访问时间为："+new Date(l).toLocaleString());//yyyy-MM-dd
 					}
 				}
 
 				//创建cookie，
 				Cookie ck = new Cookie("lastAccessTime",System.currentTimeMillis()+"");
 				//设置cookie的有效时间,单位是秒
-				ck.setMaxAge(60*5);//保存时间为5分钟
+				ck.setMaxAge(60*60*24*7);//保存时间为5分钟
 				//设置cookie的path
 				//ck.setPath("/day10_00_cookie");
 				//ck.setPath(request.getContextPath());//  /day10_00_cookie

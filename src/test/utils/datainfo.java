@@ -87,7 +87,7 @@ public class datainfo {
 
 			while (rs.next()) {
 				etjs = rs.getString("etjs");
-				response.getWriter().write(rs.getString("etjs"));
+
 
 			}
 
