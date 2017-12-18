@@ -35,10 +35,10 @@
 								<input class="form-control" placeholder="密码" name="password" type="password" value="">
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="邮箱" name="Email" type="text" >
+								<input class="form-control" placeholder="邮箱" name="email" type="text" >
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="员工号" name="Eno" type="text" >
+								<input class="form-control" placeholder="员工号" name="eno" type="text" >
 							</div>
 
 							<input type="submit" class="btn btn-primary" value="注册">

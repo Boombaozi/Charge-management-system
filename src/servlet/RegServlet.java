@@ -38,8 +38,7 @@ public class RegServlet extends HttpServlet {
 				BeanUtils.populate(user,request.getParameterMap());
 			} catch (Exception e) {
 
-				response.getWriter().write("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-				response.getWriter().write("获取表单失败0");
+				response.getWriter().write("获取表单失败");
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -50,18 +49,18 @@ public class RegServlet extends HttpServlet {
 			try {
 				us.register(user);
 			} catch (Exception e) {
-				response.getWriter().write("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-				response.getWriter().write("注册失败1");
+
+				response.getWriter().write("注册失败");
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
-		response.getWriter().write("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-			response.getWriter().write("注册成功2");
+
+			response.getWriter().write("注册成功");
 			
 			
 			response.setHeader("refresh", "1;url=" + request.getContextPath()
-					+ "/index.jsp");
+					+ "/login.jsp");
 			
 			
 		
