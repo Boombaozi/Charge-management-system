@@ -8,7 +8,22 @@
         <servlet-name>Servlet</servlet-name>
         <servlet-class>test.Servlet2</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/servlet/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegServlet</servlet-name>
+        <servlet-class>servlet.RegServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegServlet</servlet-name>
+        <url-pattern>/servlet/regServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
         <url-pattern>/servlet/http</url-pattern>
