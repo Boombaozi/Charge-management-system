@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -164,6 +165,44 @@
 				<h1 class="page-header">系统概况</h1>
 			</div>
 </div><!--/.row-->
+
+		<table class="table table-hover">
+			<caption>用电类型</caption>
+			<thead>
+			<tr>
+				<th>编号</th>
+				<th>名称</th>
+				<th>单价</th>
+				<th>最近修改时间</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Tanmay</td>
+				<td>Bangalore</td>
+				<td>560001</td>
+			</tr>
+			<tr>
+				<td>Sachin</td>
+				<td>Mumbai</td>
+				<td>400003</td>
+			</tr>
+			<tr>
+				<td>Uma</td>
+				<td>Pune</td>
+				<td>411027</td>
+			</tr>
+			</tbody>
+		</table>
+
+
+
+
+
+
+
+
+
 
 
 
