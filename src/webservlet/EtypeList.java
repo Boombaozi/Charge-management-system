@@ -2,6 +2,7 @@ package webservlet;
 
 import dao.EtypeDaoImpl;
 import domain.Etype;
+import service.EtypeServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,13 +19,10 @@ public class EtypeList extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         //调用 业务逻辑
-        EtypeDaoImpl etlist= new EtypeDaoImpl();
-        List<Etype> a= null;
-        try {
-            a = etlist.findAllEtype();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        EtypeServiceImpl etlist= new EtypeServiceImpl();
+
+        List<Etype> a = etlist.findAllEtype();
+
 
 
         //跳转页面

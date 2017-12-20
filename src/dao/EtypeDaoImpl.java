@@ -15,6 +15,6 @@ public class EtypeDaoImpl implements EtypeDao{
     @Override
     public List<Etype> findAllEtype() throws SQLException {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-        return qr.query("select * from etype", new BeanListHandler<Etype>(Etype.class));
+        return qr.query("select * from dbwork.etype", new BeanListHandler<Etype>(Etype.class));
     }
 }

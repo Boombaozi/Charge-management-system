@@ -21,6 +21,7 @@ public class EtypeServiceImpl implements EtypeService {
             return etypeDao.findAllEtype();
         } catch (SQLException A) {
             A.printStackTrace();
+            System.out.println(A);
         }
         return null;
     }

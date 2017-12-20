@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>电力公司收费管理信息系统</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/datepicker3.css" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
 
 <!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.min.js"></script>
 <![endif]-->
+
 
 </head>
 
@@ -62,7 +63,7 @@
  <!--这是菜单列表-->       
 		<ul class="nav menu">
         
-         <li><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
+         <li ><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
    
    <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
               
@@ -96,7 +97,7 @@
                         
                
                
-<li class="parent active ">
+<li class="parent active">
 			<a href="#">	
 	<span class="glyphicon glyphicon-cog"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
 				</a>
@@ -144,79 +145,61 @@
         
 		<div class="attribution">电力公司收费管理信息系统</div>
 	</div>
-		
-        
-       <!--网页内容主体！！！！！--> 
-    
-       
-        <!--当前页面标题-->   
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-		<div class="row">
-			<ol class="breadcrumb">
-				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-				<li class="active">系统状态信息</li>
-			</ol>
-		</div><!--/.row-->
-        
-         <!--网页内容！！！！--> 
-		
-<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header">系统概况</h1>
-			</div>
-</div><!--/.row-->
 
-		<table class="table table-hover">
-			<caption>用电类型</caption>
-			<thead>
-			<tr>
-				<th>编号</th>
-				<th>名称</th>
-				<th>单价</th>
-				<th>最近修改时间</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>Tanmay</td>
-				<td>Bangalore</td>
-				<td>560001</td>
-			</tr>
-			<tr>
-				<td>Sachin</td>
-				<td>Mumbai</td>
-				<td>400003</td>
-			</tr>
-			<tr>
-				<td>Uma</td>
-				<td>Pune</td>
-				<td>411027</td>
-			</tr>
-			</tbody>
-		</table>
+ <!--当前页面标题-->
+ <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+	 <div class="row">
+		 <ol class="breadcrumb">
+			 <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+			 <li class="active">系统状态信息</li>
+		 </ol>
+	 </div><!--/.row-->
+
+	 <!--网页内容！！！！-->
+
+	 <div class="row">
+		 <div class="col-lg-12">
+			 <h1 class="page-header">用电类型管理</h1>
+		 </div>
+	 </div><!--/.row-->
+       <!--网页内容主体！！！！！-->
+ <div class="table-responsive">
+	 <table class="table">
+
+		 <thead>
+		 <tr>
+			 <th>序号</th>
+			 <th>类型</th>
+			 <th>单价</th>
+			 <th>最后修改时间</th>
+		 </tr>
+		 </thead>
+		 <tbody>
+<c:forEach items="${etypelist}" var="et">
+<tr>
+			 <td>${et.etno}</td>
+			 <td>${et.etname}</td>
+			 <td>${et.price}</td>
+	          <td>${et.create_at}</td>
+
+		 </tr>
+</c:forEach>
+		 </tbody>
+	 </table>
+ </div>
 
 
 
 
+			
 
-
-
-
-
-
-
-
-
-	</div><!--/.main-->
-
-
-		<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="/js/jquery-1.11.1.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/chart.min.js"></script>
+	<script src="/js/chart-data.js"></script>
+	<script src="/js/easypiechart.js"></script>
+	<script src="/js/easypiechart-data.js"></script>
+	<script src="/js/bootstrap-datepicker.js"></script>
 	<script>
 		$('#calendar').datepicker({
 		});

@@ -119,7 +119,7 @@
                     
                     	<li>
                         
-						<a class="" href="m-etype.jsp">
+						<a class="" href="${pageContext.request.contextPath}/etypelist">
 							<span class="glyphicon glyphicon-edit"></span>用电类型管理
 						</a>
 					</li>

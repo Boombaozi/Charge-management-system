@@ -45,5 +45,12 @@
         <servlet-name>datainfoc</servlet-name>
         <url-pattern>/servlet/datainfo</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>etypelist</servlet-name>
+        <servlet-class>webservlet.EtypeList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>etypelist</servlet-name>
+        <url-pattern>/etypelist</url-pattern>
+    </servlet-mapping>
 </web-app>
