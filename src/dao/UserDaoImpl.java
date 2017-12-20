@@ -8,6 +8,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import utils.C3P0Util;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 
 public class UserDaoImpl implements UserDao {
@@ -113,4 +119,7 @@ public class UserDaoImpl implements UserDao {
         }
         return false;
     }
+
+
+
 }

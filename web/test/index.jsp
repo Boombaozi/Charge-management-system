@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>电力公司收费管理信息系统</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/datepicker3.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -61,9 +61,9 @@
  <!--这是菜单列表-->       
 		<ul class="nav menu">
         
-         <li ><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
+         <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
    
-   <li ><a href="1.jsp"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>              
+   <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
               
                
                
@@ -95,31 +95,31 @@
                         
                
                
-<li class="parent active">
+<li class="parent ">
 			<a href="#">	
 	<span class="glyphicon glyphicon-cog"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
 				</a>
 				<ul class="children collapse" id="sub-item-2">
 					<li>
-						<a class="" href="#">
+						<a class="" href="m-client.jsp">
 							<span class="glyphicon glyphicon-edit"></span>客户管理
 						</a>
 					</li>
 				
 					<li>
-						<a class="" href="#">
+						<a class="" href="m-e.jsp">
 							<span class="glyphicon glyphicon-edit"></span>员工管理
 						</a>
 					</li>
                     	<li>
-						<a class="" href="m-user.html">
+						<a class="" href="m-user.jsp">
 							<span class="glyphicon glyphicon-edit"></span>管理员管理
 						</a>
 					</li>
                     
                     	<li>
                         
-						<a class="" href="#">
+						<a class="" href="m-etype.jsp">
 							<span class="glyphicon glyphicon-edit"></span>用电类型管理
 						</a>
 					</li>
@@ -164,7 +164,71 @@
 				<h1 class="page-header">系统概况</h1>
 			</div>
 		</div><!--/.row-->
-	
+									
+		<div class="row">
+			<div class="col-xs-6 col-md-6 col-lg-3">
+				<div class="panel panel-blue panel-widget ">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-user glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">0</div>
+							<div class="text-muted"><strong>当前客户数</strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+            
+            
+			<div class="col-xs-6 col-md-6 col-lg-3">
+				<div class="panel panel-orange panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-transfer glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">0</div>
+							<div class="text-muted"><strong>上月用电量</strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-ok glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">0</div>
+							<div class="text-muted"><strong>已缴费用户</strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+
+
+
+
+			<div class="col-xs-6 col-md-6 col-lg-3">
+				<div class="panel panel-red panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-remove glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">0</div>
+							<div class="text-muted"><strong>未交费用户</strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->   		
+		
+		
 		
 			
 

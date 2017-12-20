@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,9 +61,9 @@
  <!--这是菜单列表-->       
 		<ul class="nav menu">
         
-         <li ><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
+         <li><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
    
-   <li ><a href="1.jsp"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>              
+   <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
               
                
                
@@ -101,25 +101,25 @@
 				</a>
 				<ul class="children collapse" id="sub-item-2">
 					<li>
-						<a class="" href="#">
+						<a class="" href="m-client.jsp">
 							<span class="glyphicon glyphicon-edit"></span>客户管理
 						</a>
 					</li>
 				
 					<li>
-						<a class="" href="#">
+						<a class="" href="m-e.jsp">
 							<span class="glyphicon glyphicon-edit"></span>员工管理
 						</a>
 					</li>
                     	<li>
-						<a class="" href="m-user.html">
+						<a class="" href="m-user.jsp">
 							<span class="glyphicon glyphicon-edit"></span>管理员管理
 						</a>
 					</li>
                     
                     	<li>
                         
-						<a class="" href="#">
+						<a class="" href="m-etype.jsp">
 							<span class="glyphicon glyphicon-edit"></span>用电类型管理
 						</a>
 					</li>
@@ -158,14 +158,7 @@
 		</div><!--/.row-->
         
          <!--网页内容！！！！--> 
-		
-<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header">系统概况</h1>
-			</div>
-		</div><!--/.row-->
-									
-		
+
 		
 			
 

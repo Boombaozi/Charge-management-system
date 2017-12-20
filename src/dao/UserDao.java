@@ -1,6 +1,7 @@
 package dao;
 
 import domain.User;
+import java.util.List;
 
 public interface UserDao {
 
@@ -11,6 +12,7 @@ public interface UserDao {
 
 
     public boolean findUserByName(String name);
+
 
 
 }

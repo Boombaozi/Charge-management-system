@@ -4,10 +4,18 @@ import dao.UserDao;
 import dao.UserDaoImpl;
 import domain.User;
 
+import java.sql.SQLException;
+import java.util.List;
+import java.lang.Exception;
 
 public class UserServiceImpl implements UserService {
 
-	UserDao userDao = new UserDaoImpl();
+
+
+
+	UserDaoImpl userDao = new UserDaoImpl();
+
+
 	public void register(User user) throws Exception {
 		// TODO Auto-generated method stub
 		userDao.addUser(user);
@@ -39,9 +47,11 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userDao.findUserByName(id);
 	}
-	
 
-	
-	
-	
+
+
+
+
+
+
 }

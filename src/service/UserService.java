@@ -2,6 +2,8 @@ package service;
 
 import domain.User;
 
+import java.util.List;
+
 public interface UserService {
 
 	
@@ -16,6 +18,6 @@ public interface UserService {
 	
 	
 	public boolean finduserbyname(String id)throws Exception;
-	
-	
+
+
 }

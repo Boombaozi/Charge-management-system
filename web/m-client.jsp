@@ -61,7 +61,7 @@
  <!--这是菜单列表-->       
 		<ul class="nav menu">
         
-         <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
+         <li ><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
    
    <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
               
@@ -95,7 +95,7 @@
                         
                
                
-<li class="parent ">
+<li class="parent active">
 			<a href="#">	
 	<span class="glyphicon glyphicon-cog"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
 				</a>
@@ -165,69 +165,6 @@
 			</div>
 		</div><!--/.row-->
 									
-		<div class="row">
-			<div class="col-xs-6 col-md-6 col-lg-3">
-				<div class="panel panel-blue panel-widget ">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<em class="glyphicon glyphicon-user glyphicon-l"></em>
-						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
-							<div class="text-muted"><strong>当前客户数</strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-            
-            
-			<div class="col-xs-6 col-md-6 col-lg-3">
-				<div class="panel panel-orange panel-widget">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<em class="glyphicon glyphicon-transfer glyphicon-l"></em>
-						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
-							<div class="text-muted"><strong>上月用电量</strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-6 col-lg-3">
-				<div class="panel panel-teal panel-widget">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<em class="glyphicon glyphicon-ok glyphicon-l"></em>
-						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
-							<div class="text-muted"><strong>已缴费用户</strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-            
-
-
-
-
-			<div class="col-xs-6 col-md-6 col-lg-3">
-				<div class="panel panel-red panel-widget">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<em class="glyphicon glyphicon-remove glyphicon-l"></em>
-						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
-							<div class="text-muted"><strong>未交费用户</strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/.row-->   		
-		
 		
 		
 			

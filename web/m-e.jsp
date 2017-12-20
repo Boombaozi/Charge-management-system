@@ -9,7 +9,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/datepicker3.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
-
+	<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
@@ -61,9 +61,9 @@
  <!--这是菜单列表-->       
 		<ul class="nav menu">
         
-         <li><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
+         <li ><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
    
-   <li ><a href="1.jsp"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>              
+   <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
               
                
                
@@ -95,31 +95,31 @@
                         
                
                
-<li class="parent active ">
+<li class="parent active">
 			<a href="#">	
 	<span class="glyphicon glyphicon-cog"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
 				</a>
 				<ul class="children collapse" id="sub-item-2">
 					<li>
-						<a class="" href="#">
+						<a class="" href="m-client.jsp">
 							<span class="glyphicon glyphicon-edit"></span>客户管理
 						</a>
 					</li>
 				
 					<li>
-						<a class="" href="#">
+						<a class="" href="m-e.jsp">
 							<span class="glyphicon glyphicon-edit"></span>员工管理
 						</a>
 					</li>
                     	<li>
-						<a class="" href="m-user.html">
+						<a class="" href="m-user.jsp">
 							<span class="glyphicon glyphicon-edit"></span>管理员管理
 						</a>
 					</li>
                     
                     	<li>
                         
-						<a class="" href="#">
+						<a class="" href="m-etype.jsp">
 							<span class="glyphicon glyphicon-edit"></span>用电类型管理
 						</a>
 					</li>
@@ -164,12 +164,7 @@
 				<h1 class="page-header">系统概况</h1>
 			</div>
 		</div><!--/.row-->
-		
-
-
-
-
-		
+	
 		
 			
 
