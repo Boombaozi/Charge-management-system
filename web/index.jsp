@@ -1,7 +1,15 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@ page import="my.*" %>
+<%@ page import="java.util.Arrays" %>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+'/';
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
+	<base href="<%=basePath%>">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>电力公司收费管理信息系统</title>
@@ -119,7 +127,7 @@
                     
                     	<li>
                         
-						<a class="" href="${pageContext.request.contextPath}/etypelist">
+						<a class="" href="${pageContext.request.contextPath}/web/etypelist">
 							<span class="glyphicon glyphicon-edit"></span>用电类型管理
 						</a>
 					</li>
@@ -158,7 +166,13 @@
 		</div><!--/.row-->
         
          <!--网页内容！！！！--> 
-		
+<%
+String[] arr=new String[31];
+	my.info a= new info();
+		arr=a.getinfo(request,response);
+			%>
+
+
 <div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">系统概况</h1>
@@ -173,7 +187,7 @@
 							<em class="glyphicon glyphicon-user glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
+							<div class="large"><%out.write(arr[0]);%> 位</div>
 							<div class="text-muted"><strong>当前客户数</strong></div>
 						</div>
 					</div>
@@ -189,8 +203,8 @@
 							<em class="glyphicon glyphicon-transfer glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
-							<div class="text-muted"><strong>上月用电量</strong></div>
+							<div class="large"><%out.write(arr[1]);%> 度</div>
+							<div class="text-muted"><strong>上月总用电量</strong></div>
 						</div>
 					</div>
 				</div>
@@ -226,6 +240,13 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
+
+
+
 		</div><!--/.row-->   		
 		
 		

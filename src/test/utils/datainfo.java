@@ -71,27 +71,36 @@ public class datainfo {
 	}
 
 
-	public static String getdatainfo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public static String[] getdatainfo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		Connection conn = null;
 		java.sql.PreparedStatement ps = null;
 		ResultSet rs = null;
 
-		String etjs = null;
+
+		String[] arr=new String[4];
+
 		try {
 			conn = DBUtils.getConnection();
-			ps = conn.prepareStatement("select count(*) as etjs from etype");
+			ps = conn.prepareStatement("select count(*) as a from client");
 
 
 			rs = ps.executeQuery();
 
+
 			while (rs.next()) {
-				etjs = rs.getString("etjs");
-
-
+				arr[0] = rs.getString("a");
 			}
+			ps= conn.prepareStatement("select sum(enum) as b from einfo");
+rs=ps.executeQuery();
+while (rs.next()){
+	arr[1]=rs.getString("b");
 
 
+
+
+
+}
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.getWriter().write("数据库连接错误!!!!!!");
@@ -99,7 +108,7 @@ public class datainfo {
 			DBUtils.closeAll(rs, ps, conn);
 		}
 
-		return etjs;
+		return arr;
 
 	}
 

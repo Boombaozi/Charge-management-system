@@ -171,7 +171,20 @@
 		 </div>
 	 </div><!--/.row-->
        <!--网页内容主体！！！！！-->
+
+
+	 <div class="panel panel-default">
+		<div class="panel-heading">
+			<!--表格头部-->
+			<div class="pull-left">
+			<button class="btn btn-success glyphicon glyphicon-plus">New</button>
+				<button class="btn btn-primary glyphicon glyphicon-upload">update</button>
+				<button class="btn btn-danger glyphicon glyphicon-trash">Delete</button>
+		    </div>
+		</div>
+
  <div class="table-responsive">
+
 	 <table class="table">
 
 		 <thead>
@@ -189,19 +202,21 @@
 			 <td>${et.etname}</td>
 			 <td>${et.price}</td>
 	          <td>${et.create_at}</td>
-
+	<td>b</td>
 		 </tr>
 </c:forEach>
 		 </tbody>
 	 </table>
+
+
  </div>
 
 
+	</div>
 
 
-			
-
-	<script src="js/jquery-1.11.1.min.js"></script>
+</div>
+	 <script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chart.min.js"></script>
 	<script src="js/chart-data.js"></script>

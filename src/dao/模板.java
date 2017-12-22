@@ -1,14 +1,11 @@
 package dao;
-
-import domain.Etype;
-
-
+import domain.*;
 import java.sql.SQLException;
 import java.util.List;
 
 
-public interface EtypeDao {
 
+public interface 模板 {
 
     public List<Etype> findAllEtype() throws SQLException;
 
@@ -19,6 +16,5 @@ public interface EtypeDao {
     public void updateEtype(Etype etype) throws SQLException;
 
     public Etype findEtypeById(String id) throws SQLException;
-
 
 }

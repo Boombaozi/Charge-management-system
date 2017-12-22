@@ -7,6 +7,10 @@ public class Etype {
 
     private String etno;
     private String etname;
+    private float price;
+    private Timestamp create_at;
+
+
 
     public String getEtno() {
         return etno;
@@ -40,7 +44,6 @@ public class Etype {
         this.create_at = create_at;
     }
 
-    private float price;
-    private Timestamp create_at;
+
 
 }
