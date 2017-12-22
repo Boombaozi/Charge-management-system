@@ -1,4 +1,4 @@
-package webservlet;
+package webservlet.Etype;
 
 import dao.EtypeDaoImpl;
 import domain.Etype;

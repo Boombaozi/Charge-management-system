@@ -41,15 +41,6 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://F:/java依赖包/c3p0-0.9.1.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
           <root url="jar://F:/java依赖包/commons-beanutils-1.8.3.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -69,6 +60,24 @@
       <library>
         <CLASSES>
           <root url="jar://F:/java依赖包/commons-logging-1.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://F:/java依赖包/c3p0-0.9.5.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://F:/java依赖包/mchange-commons-java-0.2.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

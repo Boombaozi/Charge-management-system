@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String path = request.getContextPath();
@@ -11,8 +11,10 @@
 <head>
 
 	<base href="<%=basePath%>">
+
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"charset="utf-8">
 <title>电力公司收费管理信息系统</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -257,7 +259,7 @@
 
 
 
-	                 <p>One fine body…</p>
+
 	             </div>
 	             <div class="modal-footer">
 	                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

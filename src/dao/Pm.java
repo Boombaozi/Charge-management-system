@@ -3,13 +3,13 @@ import domain.*;
 import java.sql.SQLException;
 import java.util.List;
 public interface Pm {
-    public List<Etype> findAllEtype() throws SQLException;
+    public List<Pm> findAllPm() throws SQLException;
 
-    public void addEtype(Etype etype) throws SQLException;
+    public void addPm(Pm p) throws SQLException;
 
-    public void deleteEtype(Etype etype) throws SQLException;
+    public void deletePm(Pm p) throws SQLException;
 
-    public void updateEtype(Etype etype) throws SQLException;
+    public void updatePm(Pm p) throws SQLException;
 
-    public Etype findEtypeById(String id) throws SQLException;
+    public Pm findPmById(String cno) throws SQLException;
 }

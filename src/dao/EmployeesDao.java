@@ -3,13 +3,13 @@ import domain.*;
 import java.sql.SQLException;
 import java.util.List;
 public interface EmployeesDao {
-    public List<Etype> findAllEtype() throws SQLException;
+    public List<Employees> findAllEmployees() throws SQLException;
 
-    public void addEtype(Etype etype) throws SQLException;
+    public void addEmployees(Employees e) throws SQLException;
 
-    public void deleteEtype(Etype etype) throws SQLException;
+    public void deleteEmployees(Employees e) throws SQLException;
 
-    public void updateEtype(Etype etype) throws SQLException;
+    public void updateEmployees(Employees e) throws SQLException;
 
-    public Etype findEtypeById(String id) throws SQLException;
+    public Employees findEmployeesById(String eno) throws SQLException;
 }
