@@ -5,15 +5,15 @@ import java.util.List;
 
 public interface ClientDao {
 
-    public List<client> findAllEtype() throws SQLException;
+    public List<client> findAllClient() throws SQLException;
 
     public void addClient(client client) throws SQLException;
 
-    public void delete(client client) throws SQLException;
+    public void deleteClient(client client) throws SQLException;
 
     public void updateClient(client client) throws SQLException;
 
-    public client findClientById(String id) throws SQLException;
+    public client findClientById(String cno) throws SQLException;
 
 
 }

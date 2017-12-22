@@ -25,4 +25,16 @@ public class EtypeServiceImpl implements EtypeService {
         }
         return null;
     }
+
+    @Override
+    public void addEtype(Etype etype) {
+
+        try {
+            etypeDao.addEtype(etype);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }

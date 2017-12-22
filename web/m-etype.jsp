@@ -170,14 +170,14 @@
 			 <h1 class="page-header">用电类型管理</h1>
 		 </div>
 	 </div><!--/.row-->
-       <!--网页内容主体！！！！！-->
 
 
+	 <!--表格主体开始-->
 	 <div class="panel panel-default">
 		<div class="panel-heading">
 			<!--表格头部-->
 			<div class="pull-left">
-			<button class="btn btn-success glyphicon glyphicon-plus">New</button>
+			<button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal">New</button>
 				<button class="btn btn-primary glyphicon glyphicon-upload">update</button>
 				<button class="btn btn-danger glyphicon glyphicon-trash">Delete</button>
 		    </div>
@@ -213,9 +213,63 @@
 
 
 	</div>
+	 <!--表格主体结束-->
 
 
-</div>
+
+	 <!--添加功能弹出狂主体-->
+	 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	     <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	              <div class="modal-header">
+	                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                     <span aria-hidden="true">×</span>
+	                </button>
+
+	             </div>
+	              <div class="modal-body">
+					  <div class="login-panel panel panel-default">
+						  <div class="panel-heading">添加用电类型</div>
+						  <div class="panel-body">
+
+
+							  <form role="form" action="${pageContext.request.contextPath }/web/etypeadd" method="post">
+								  <fieldset>
+									  <div class="form-group">
+										  <input class="form-control" placeholder="序号" name="etno" type="text" >
+									  </div>
+									  <div class="form-group">
+										  <input class="form-control" placeholder="名称" name="etname" type="text" >
+									  </div>
+									  <div class="form-group">
+										  <input class="form-control" placeholder="单价" name="price" type="text" >
+									  </div>
+
+
+									  <input type="submit" class="btn btn-primary" value="增加">
+
+								  </fieldset>
+							  </form>
+
+
+						  </div>
+					  </div>
+
+
+
+	                 <p>One fine body…</p>
+	             </div>
+	             <div class="modal-footer">
+	                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                 <button type="button" class="btn btn-primary">Save</button>
+	           </div>
+	         </div>
+	    </div>
+	 </div>
+	 <!--弹出框结束-->
+
+
+ </div><!--当前页面主题结束-->
 	 <script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chart.min.js"></script>
