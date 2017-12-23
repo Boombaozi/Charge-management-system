@@ -32,14 +32,15 @@ public class EtypeDaoImpl implements EtypeDao{
     @Override
     public void deleteEtype(Etype etype) throws SQLException {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-        qr.update("delect from dbwork.etype where etno=?",etype.getEtno());
+        qr.update("delete from dbwork.etype where etno=?",etype.getEtno());
     }
 
     @Override
     public void updateEtype(Etype etype) throws SQLException {
 
             QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-            qr.update("update etype set etname=?,price=?,where id=?",etype.getEtname(),etype.getPrice(),etype.getEtno());
+            qr.update("update etype set etname=?,price=? where etno=?",
+                    etype.getEtname(),etype.getPrice(),etype.getEtno());
 
 
         }

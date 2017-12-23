@@ -71,7 +71,7 @@
         
          <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
    
-   <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
+   <li ><a href="cr.jsp"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
               
                
                
@@ -240,8 +240,6 @@ String[] arr=new String[31];
 					</div>
 				</div>
 			</div>
-
-
 
 
 

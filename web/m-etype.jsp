@@ -179,9 +179,9 @@
 		<div class="panel-heading">
 			<!--表格头部-->
 			<div class="pull-left">
-			<button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal">New</button>
-				<button class="btn btn-primary glyphicon glyphicon-upload">update</button>
-				<button class="btn btn-danger glyphicon glyphicon-trash">Delete</button>
+			<button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#add">New</button>
+				<button class="btn btn-primary glyphicon glyphicon-upload"data-toggle="modal" data-target="#updata">update</button>
+				<button class="btn btn-danger glyphicon glyphicon-trash"data-toggle="modal" data-target="#delete">Delete</button>
 		    </div>
 		</div>
 
@@ -220,7 +220,7 @@
 
 
 	 <!--添加功能弹出狂主体-->
-	 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	 <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	     <div class="modal-dialog" role="document">
 	        <div class="modal-content">
 	              <div class="modal-header">
@@ -270,6 +270,105 @@
 	 </div>
 	 <!--弹出框结束-->
 
+	 <!--删除功能弹出狂主体-->
+	 <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		 <div class="modal-dialog" role="document">
+			 <div class="modal-content">
+
+				 <div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						 <span aria-hidden="true">×</span>
+					 </button>
+
+				 </div>
+				 <div class="modal-body">
+					 <div class="login-panel panel panel-default">
+						 <div class="panel-heading">请输入要删除的id</div>
+						 <div class="panel-body">
+
+
+							 <form role="form" action="${pageContext.request.contextPath }/web/etypedelete" method="post">
+								 <fieldset>
+									 <div class="form-group">
+										 <input class="form-control" placeholder="序号" name="etno" type="text" >
+									 </div>
+
+
+									 <input type="submit" class="btn btn-primary" value="删除">
+
+								 </fieldset>
+							 </form>
+
+
+						 </div>
+					 </div>
+
+
+
+
+				 </div>
+				 <div class="modal-footer">
+
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+	 <!--弹出框结束-->
+
+	 <!--更新功能弹出狂主体-->
+	 <div class="modal fade" id="updata" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		 <div class="modal-dialog" role="document">
+			 <div class="modal-content">
+
+				 <div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						 <span aria-hidden="true">×</span>
+					 </button>
+
+				 </div>
+				 <div class="modal-body">
+					 <div class="login-panel panel panel-default">
+						 <div class="panel-heading">请输入正确的序号进行更新</div>
+						 <div class="panel-body">
+
+
+							 <form role="form" action="${pageContext.request.contextPath }/web/etypeupdata" method="post">
+								 <fieldset>
+									 <div class="form-group">
+										 <input class="form-control" placeholder="序号" name="etno" type="text" >
+									 </div>
+									 <div class="form-group">
+										 <input class="form-control" placeholder="名称" name="etname" type="text" >
+									 </div>
+									 <div class="form-group">
+										 <input class="form-control" placeholder="单价" name="price" type="text" >
+									 </div>
+
+
+									 <input type="submit" class="btn btn-primary" value="更改">
+
+								 </fieldset>
+							 </form>
+
+
+						 </div>
+					 </div>
+
+
+
+
+				 </div>
+				 <div class="modal-footer">
+
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+	 <!--弹出框结束-->
 
  </div><!--当前页面主题结束-->
 	 <script src="js/jquery-1.11.1.min.js"></script>

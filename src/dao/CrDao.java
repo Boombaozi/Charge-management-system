@@ -11,6 +11,6 @@ public interface CrDao {
 
     public void updateCr(Cr cr) throws SQLException;
 
-    public Cr findCrById(String cno) throws SQLException;
+    public Cr findCrById(Cr cr) throws SQLException;
 
 }

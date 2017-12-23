@@ -50,6 +50,9 @@
 
 
 
+
+
+
     <!--etypelist-->
     <servlet>
         <servlet-name>etypelist</servlet-name>
@@ -72,4 +75,21 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>etypedelete</servlet-name>
+        <servlet-class>webservlet.Etype.EtypeDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>etypedelete</servlet-name>
+        <url-pattern>/web/etypedelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>etypeupdata</servlet-name>
+        <servlet-class>webservlet.Etype.EtypeUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>etypeupdata</servlet-name>
+        <url-pattern>/web/etypeupdata</url-pattern>
+    </servlet-mapping>
 </web-app>

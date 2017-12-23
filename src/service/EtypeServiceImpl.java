@@ -12,8 +12,10 @@ public class EtypeServiceImpl implements EtypeService {
 
     EtypeDaoImpl etypeDao = new EtypeDaoImpl();
 
+
+
     @Override
-    public List<Etype> findAllEtype() {
+    public List<Etype> findAllEtype1() {
 
 
 
@@ -27,7 +29,7 @@ public class EtypeServiceImpl implements EtypeService {
     }
 
     @Override
-    public void addEtype(Etype etype) {
+    public void addEtype1(Etype etype) {
 
         try {
             etypeDao.addEtype(etype);
@@ -36,5 +38,23 @@ public class EtypeServiceImpl implements EtypeService {
         }
 
 
+    }
+
+    @Override
+    public void deleteEtype1(Etype etype) {
+        try {
+            etypeDao.deleteEtype(etype);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void updateEtype1(Etype etype) {
+        try {
+            etypeDao.updateEtype(etype);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

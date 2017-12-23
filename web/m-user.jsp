@@ -151,8 +151,7 @@
 	</div>
 		
         
-       <!--网页内容主体！！！！！--> 
-    
+
        
         <!--当前页面标题-->   
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
@@ -163,8 +162,210 @@
 			</ol>
 		</div><!--/.row-->
         
-         <!--网页内容！！！！--> 
+         <!--网页内容！！！！-->
 
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">管理员管理</h1>
+			</div>
+		</div><!--/.row-->
+		<!--表格主体开始-->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<!--表格头部-->
+				<div class="pull-left">
+					<button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#add3">New</button>
+					<button class="btn btn-primary glyphicon glyphicon-upload"data-toggle="modal" data-target="#updata3">update</button>
+					<button class="btn btn-danger glyphicon glyphicon-trash"data-toggle="modal" data-target="#delete3">Delete</button>
+				</div>
+			</div>
+
+			<div class="table-responsive">
+
+				<table class="table">
+
+					<thead>
+					<tr>
+						<th>序号</th>
+						<th>类型</th>
+						<th>单价</th>
+						<th>最后修改时间</th>
+					</tr>
+					</thead>
+					<tbody>
+					<c:forEach items="${etypelist}" var="et">
+						<tr>
+							<td>${et.etno}</td>
+							<td>${et.etname}</td>
+							<td>${et.price}</td>
+							<td>${et.create_at}</td>
+							<td>b</td>
+						</tr>
+					</c:forEach>
+					</tbody>
+				</table>
+
+
+			</div>
+
+
+		</div>
+		<!--表格主体结束-->
+
+
+
+		<!--添加功能弹出狂主体-->
+		<div class="modal fade" id="add3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+
+					</div>
+					<div class="modal-body">
+						<div class="login-panel panel panel-default">
+							<div class="panel-heading">添加用电类型</div>
+							<div class="panel-body">
+
+
+								<form role="form" action="${pageContext.request.contextPath }/web/etypeadd" method="post">
+									<fieldset>
+										<div class="form-group">
+											<input class="form-control" placeholder="序号" name="etno" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="名称" name="etname" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="单价" name="price" type="text" >
+										</div>
+
+
+										<input type="submit" class="btn btn-primary" value="增加">
+
+									</fieldset>
+								</form>
+
+
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹出框结束-->
+
+		<!--删除功能弹出狂主体-->
+		<div class="modal fade" id="delete3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+
+					</div>
+					<div class="modal-body">
+						<div class="login-panel panel panel-default">
+							<div class="panel-heading">请输入要删除的id</div>
+							<div class="panel-body">
+
+
+								<form role="form" action="${pageContext.request.contextPath }/web/etypedelete" method="post">
+									<fieldset>
+										<div class="form-group">
+											<input class="form-control" placeholder="序号" name="etno" type="text" >
+										</div>
+
+
+										<input type="submit" class="btn btn-primary" value="删除">
+
+									</fieldset>
+								</form>
+
+
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="modal-footer">
+
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹出框结束-->
+
+		<!--更新功能弹出狂主体-->
+		<div class="modal fade" id="updata3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+
+					</div>
+					<div class="modal-body">
+						<div class="login-panel panel panel-default">
+							<div class="panel-heading">请输入正确的序号进行更新</div>
+							<div class="panel-body">
+
+
+								<form role="form" action="${pageContext.request.contextPath }/web/etypeupdata" method="post">
+									<fieldset>
+										<div class="form-group">
+											<input class="form-control" placeholder="序号" name="etno" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="名称" name="etname" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="单价" name="price" type="text" >
+										</div>
+
+
+										<input type="submit" class="btn btn-primary" value="更改">
+
+									</fieldset>
+								</form>
+
+
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="modal-footer">
+
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹出框结束-->
+
+	</div><!--当前页面主题结束-->
 		
 			
 

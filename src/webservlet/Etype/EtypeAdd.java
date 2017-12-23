@@ -20,7 +20,7 @@ import java.util.List;
 public class EtypeAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        //调用 业务逻辑////
+        //调用 业务逻辑
         request.setCharacterEncoding("UTF-8");
 
 
@@ -37,7 +37,7 @@ public class EtypeAdd extends HttpServlet {
 
 
        EtypeServiceImpl a= new EtypeServiceImpl();
-        a.addEtype(etype);
+        a.addEtype1(etype);
 
         //response.getWriter().write("what??"+"   序号："+etype.getEtno()+"   名称："+etype.getEtname()+"   价格："+etype.getPrice());
 

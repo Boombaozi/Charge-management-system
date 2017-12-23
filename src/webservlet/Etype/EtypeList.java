@@ -21,7 +21,7 @@ public class EtypeList extends HttpServlet {
         //调用 业务逻辑
         EtypeServiceImpl etlist= new EtypeServiceImpl();
 
-        List<Etype> a = etlist.findAllEtype();
+        List<Etype> a = etlist.findAllEtype1();
 
 
 
