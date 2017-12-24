@@ -23,7 +23,7 @@ public class EtypeDaoImpl implements EtypeDao{
     public void addEtype(Etype etype) throws SQLException {
 
             QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-        QueryRunner qr1 = new QueryRunner(C3P0Util.getDataSource());
+
 
             qr.update("INSERT INTO dbwork.etype VALUES(?,?,?,current_timestamp)",etype.getEtno(),etype.getEtname(),etype.getPrice());
 

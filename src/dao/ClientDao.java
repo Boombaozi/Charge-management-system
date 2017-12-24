@@ -13,7 +13,7 @@ public interface ClientDao {
 
     public void updateClient(client client) throws SQLException;
 
-    public client findClientById(String cno) throws SQLException;
+    public client findClientById(client client) throws SQLException;
 
 
 }
