@@ -12,6 +12,14 @@ public class Cr {
     private String eno;
     private Timestamp create_at;
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     public Timestamp getCreate_at() {
         return create_at;
     }
@@ -20,13 +28,6 @@ public class Cr {
         this.create_at = create_at;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
 
     public String getCno() {

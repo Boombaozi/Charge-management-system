@@ -9,7 +9,7 @@ public class client {
     private String cname;
     private String addr;
     private String ctel;
-    private String money;
+    private float money;
     private Timestamp create_at;
 
     public Timestamp getCreate_at() {
@@ -44,16 +44,13 @@ public class client {
         this.ctel = ctel;
     }
 
-    public String getMoney() {
+    public float getMoney() {
         return money;
     }
 
-    public void setMoney(String money) {
+    public void setMoney(float money) {
         this.money = money;
     }
-
-
-
 
     public String getCname() {
         return cname;

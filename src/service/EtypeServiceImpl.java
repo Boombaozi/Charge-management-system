@@ -13,10 +13,8 @@ public class EtypeServiceImpl implements EtypeService {
     EtypeDaoImpl etypeDao = new EtypeDaoImpl();
 
 
-
     @Override
     public List<Etype> findAllEtype1() {
-
 
 
         try {

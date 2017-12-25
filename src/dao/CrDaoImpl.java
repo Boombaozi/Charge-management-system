@@ -14,7 +14,7 @@ public class CrDaoImpl implements CrDao {
     @Override
     public List<Cr> findAllCr() throws SQLException {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-        return qr.query("select * from dbwork.cr order by cno", new BeanListHandler<Cr>(Cr.class));
+        return qr.query("select * from dbwork.cr", new BeanListHandler<Cr>(Cr.class));
 
 
     }
@@ -32,7 +32,7 @@ public class CrDaoImpl implements CrDao {
     @Override
     public void deleteCr(Cr cr) throws SQLException {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-        qr.update("delete from dbwork.cr where etno=? and data=?",
+        qr.update("delete from dbwork.cr where cno=? and date=?",
                 cr.getCno(),cr.getDate());
     }
 
@@ -47,6 +47,16 @@ public class CrDaoImpl implements CrDao {
         return qr.query("select * from dbwork.cr where cno=? and data=?",
                 new BeanHandler<Cr>(Cr.class), cr.getCno(), cr.getDate());
 
+
+    }
+
+    @Override
+    public void addCr2(Cr cr) throws SQLException {
+        QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
+
+
+        qr.update("INSERT INTO dbwork.cr VALUES(?,CURDATE(),?,?,?,current_timestamp)",
+                cr.getCno(),cr.getSc(),cr.getAc(),cr.getEno());
 
     }
 }

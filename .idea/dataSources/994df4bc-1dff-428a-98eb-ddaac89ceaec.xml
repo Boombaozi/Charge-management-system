@@ -57,20 +57,19 @@
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="20" parent="6" name="data">
+    <column id="20" parent="6" name="date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00&apos;</DefaultExpression>
     </column>
     <column id="21" parent="6" name="sc">
       <Position>3</Position>
       <DataType>float(9,2)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="22" parent="6" name="ac">
       <Position>4</Position>
       <DataType>float(9,2)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="23" parent="6" name="eno">
       <Position>5</Position>
@@ -82,13 +81,14 @@
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <index id="25" parent="6" name="eno">
+    <index id="25" parent="6" name="cr_ibfk_2">
       <ColNames>eno</ColNames>
     </index>
     <key id="26" parent="6" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cno
-data</ColNames>
+date
+create_at</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="27" parent="6" name="cr_ibfk_1">
@@ -109,7 +109,7 @@ data</ColNames>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="30" parent="7" name="data">
+    <column id="30" parent="7" name="date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
@@ -135,7 +135,7 @@ data</ColNames>
     <key id="35" parent="7" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cno
-data</ColNames>
+date</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="36" parent="7" name="einfo_ibfk_2">
@@ -150,143 +150,139 @@ data</ColNames>
       <RefTableName>etype</RefTableName>
       <RefColNames>etno</RefColNames>
     </foreign-key>
-    <trigger id="38" parent="7" name="first">
-      <Turn>after-row</Turn>
-      <Events>I</Events>
-    </trigger>
-    <column id="39" parent="8" name="eno">
+    <column id="38" parent="8" name="eno">
       <Position>1</Position>
       <DataType>varchar(12)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="40" parent="8" name="name">
+    <column id="39" parent="8" name="name">
       <Position>2</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="8" name="sex">
+    <column id="40" parent="8" name="sex">
       <Position>3</Position>
       <DataType>varchar(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="8" name="etel">
+    <column id="41" parent="8" name="etel">
       <Position>4</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="8" name="create_at">
+    <column id="42" parent="8" name="create_at">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="44" parent="8" name="PRIMARY">
+    <key id="43" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>eno</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="45" parent="9" name="etno">
+    <column id="44" parent="9" name="etno">
       <Position>1</Position>
       <DataType>varchar(12)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="46" parent="9" name="etname">
+    <column id="45" parent="9" name="etname">
       <Position>2</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="9" name="price">
+    <column id="46" parent="9" name="price">
       <Position>3</Position>
       <DataType>float(9,2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="9" name="create_at">
+    <column id="47" parent="9" name="create_at">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="49" parent="9" name="PRIMARY">
+    <key id="48" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>etno</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="50" parent="10" name="cno">
+    <column id="49" parent="10" name="cno">
       <Position>1</Position>
       <DataType>varchar(12)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="51" parent="10" name="data">
+    <column id="50" parent="10" name="date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="10" name="charge">
+    <column id="51" parent="10" name="charge">
       <Position>3</Position>
       <DataType>float(9,2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="10" name="sign">
+    <column id="52" parent="10" name="sign">
       <Position>4</Position>
       <DataType>varchar(2)|0</DataType>
       <DefaultExpression>&apos;未收&apos;</DefaultExpression>
     </column>
-    <column id="54" parent="10" name="create_at">
+    <column id="53" parent="10" name="create_at">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="55" parent="10" name="PRIMARY">
+    <key id="54" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cno
-data</ColNames>
+date</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="56" parent="10" name="pm_ibfk_1">
+    <foreign-key id="55" parent="10" name="pm_ibfk_1">
       <ColNames>cno</ColNames>
       <RefSchemaName>dbwork</RefSchemaName>
       <RefTableName>client</RefTableName>
       <RefColNames>cno</RefColNames>
     </foreign-key>
-    <column id="57" parent="11" name="id">
+    <column id="56" parent="11" name="id">
       <Position>1</Position>
       <DataType>varchar(12)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="58" parent="11" name="password">
+    <column id="57" parent="11" name="password">
       <Position>2</Position>
       <DataType>varchar(16)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="11" name="email">
+    <column id="58" parent="11" name="email">
       <Position>3</Position>
       <DataType>varchar(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="11" name="eno">
+    <column id="59" parent="11" name="eno">
       <Position>4</Position>
       <DataType>varchar(12)|0</DataType>
     </column>
-    <column id="61" parent="11" name="create_at">
+    <column id="60" parent="11" name="create_at">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <index id="62" parent="11" name="eno">
+    <index id="61" parent="11" name="eno">
       <ColNames>eno</ColNames>
     </index>
-    <key id="63" parent="11" name="PRIMARY">
+    <key id="62" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="64" parent="11" name="users_ibfk_1">
+    <foreign-key id="63" parent="11" name="users_ibfk_1">
       <ColNames>eno</ColNames>
       <RefSchemaName>dbwork</RefSchemaName>
       <RefTableName>employees</RefTableName>

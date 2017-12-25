@@ -39,8 +39,8 @@ public class ClientDaoImpl implements ClientDao {
     @Override
     public void updateClient(client client) throws SQLException {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-        qr.update("update etype set cno=?,cname=?,addr=?,ctel=?,money=? where cno=?",
-            client.getCno(),client.getCname(),client.getAddr(),client.getAddr(),client.getCtel(),client.getMoney()
+        qr.update("update client set cname=?,addr=?,ctel=?,money=? where cno=?",
+           client.getCname(),client.getAddr(),client.getCtel(),client.getMoney() ,client.getCno()
                );
     }
 

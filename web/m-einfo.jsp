@@ -108,24 +108,30 @@
 				<ul class="children collapse" id="sub-item-2">
 					<li>
 						<a class="" href="m-client.jsp">
-							<span class="glyphicon glyphicon-edit"></span>客户管理
+							<span class="glyphicon glyphicon-edit"></span>客户信息管理
 						</a>
 					</li>
-				
+
 					<li>
 						<a class="" href="m-e.jsp">
-							<span class="glyphicon glyphicon-edit"></span>员工管理
+							<span class="glyphicon glyphicon-edit"></span>业务员管理
 						</a>
 					</li>
-                    	<li>
-						<a class="" href="m-user.jsp">
-							<span class="glyphicon glyphicon-edit"></span>管理员管理
+					<li>
+						<a class="" href="m-einfo.jsp">
+							<span class="glyphicon glyphicon-edit"></span>客户用电信息管理
 						</a>
 					</li>
-                    
-                    	<li>
-                        
-						<a class="" href="m-etype.jsp">
+					<li>
+						<a class="" href="m-pm.jsp">
+							<span class="glyphicon glyphicon-edit"></span>客户用电费用管理
+						</a>
+					</li>
+
+
+					<li>
+
+						<a class="" href="${pageContext.request.contextPath}/web/etypelist">
 							<span class="glyphicon glyphicon-edit"></span>用电类型管理
 						</a>
 					</li>

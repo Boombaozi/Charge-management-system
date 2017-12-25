@@ -48,8 +48,26 @@
 
 
 
+    <!--mainsettle-->
+    <servlet>
+        <servlet-name>SettleServlet</servlet-name>
+        <servlet-class>servlet.SettleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SettleServlet</servlet-name>
+        <url-pattern>/web/mainsettle</url-pattern>
+    </servlet-mapping>
 
 
+    <!--mainpay-->
+    <servlet>
+        <servlet-name>PayServlet1</servlet-name>
+        <servlet-class>servlet.PayServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PayServlet1</servlet-name>
+        <url-pattern>/web/mainpay1</url-pattern>
+    </servlet-mapping>
 
 
 
@@ -74,7 +92,7 @@
         <url-pattern>/web/etypeadd</url-pattern>
     </servlet-mapping>
 
-
+    <!--etypedelete-->
     <servlet>
         <servlet-name>etypedelete</servlet-name>
         <servlet-class>webservlet.Etype.EtypeDelete</servlet-class>
@@ -84,6 +102,8 @@
         <url-pattern>/web/etypedelete</url-pattern>
     </servlet-mapping>
 
+
+    <!--etypeupdate-->
     <servlet>
         <servlet-name>etypeupdata</servlet-name>
         <servlet-class>webservlet.Etype.EtypeUpdate</servlet-class>
@@ -91,5 +111,42 @@
     <servlet-mapping>
         <servlet-name>etypeupdata</servlet-name>
         <url-pattern>/web/etypeupdata</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <!--crelist-->
+    <servlet>
+        <servlet-name>CrList</servlet-name>
+        <servlet-class>webservlet.Cr.CrList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CrList</servlet-name>
+        <url-pattern>/web/crlist</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CrAdd</servlet-name>
+        <servlet-class>webservlet.Cr.CrAdd</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CrAdd</servlet-name>
+        <url-pattern>/web/cradd</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>CrDelete</servlet-name>
+        <servlet-class>webservlet.Cr.CrDelete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CrDelete</servlet-name>
+        <url-pattern>/web/crdelete</url-pattern>
     </servlet-mapping>
 </web-app>

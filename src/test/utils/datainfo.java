@@ -22,7 +22,7 @@ public class datainfo {
 		response.getWriter().write("aaaaaa");
 		try {
 			conn = DBUtils.getConnection();
-			ps = conn.prepareStatement("select * from etype");
+			ps = conn.prepareStatement("select * from cr");
 			response.getWriter().write("<meta http-equiv='Content-Type' content='text/html; charset=utf-8'><br/>");
 
 			rs = ps.executeQuery();
@@ -32,7 +32,9 @@ public class datainfo {
 				response.getWriter().write(rs.getString(1) + "  |  ");
 				response.getWriter().write(rs.getString(2) + "  |  ");
 				response.getWriter().write(rs.getString(3) + "  |  ");
-				response.getWriter().write("最后修改时间:" + rs.getString(4) + "  |  ");
+				response.getWriter().write(rs.getString(4) + "  |  ");
+				response.getWriter().write("最后修改时间:" + rs.getString(5) + "  |  ");
+
 				response.getWriter().write("<br/>--------------------<br/>");
 			}
 

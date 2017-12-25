@@ -11,4 +11,5 @@ public interface EtypeService {
     public void addEtype1(Etype etype);
     public void deleteEtype1(Etype etype);
     public void updateEtype1(Etype etype);
+
 }

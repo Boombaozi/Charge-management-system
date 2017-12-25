@@ -124,7 +124,7 @@
 						</a>
 					</li>
                     	<li>
-						<a class="" href="m-user.jsp">
+						<a class="" href="m-einfo.jsp">
 							<span class="glyphicon glyphicon-edit"></span>管理员管理
 						</a>
 					</li>

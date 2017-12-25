@@ -3,3 +3,23 @@
 seUnicode=true&amp;characterEncoding=GBK
 
 seUnicode=true&amp;characterEncoding=GBK
+
+
+<%
+
+		Cr cr= new Cr();
+		cr.setCno("1");
+		Date a11;
+
+
+
+		a11=(Date.valueOf("20171215"));
+		SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+
+		simpleDateFormat.format(a11);
+
+		cr.setDate(Date.valueOf("2017-12-15"));
+       MainImpl main = new MainImpl();
+      main.settle1(cr);%>
+
+
