@@ -80,33 +80,6 @@ public class info {
                 arr[3]=rs.getString("d");
             }
 
-            ps= conn.prepareStatement("select sum(enum) as e from einfo  where etno=1;");
-
-            rs=ps.executeQuery();
-            while (rs.next()){
-                arr[4]=rs.getString("e");
-            }
-
-            ps= conn.prepareStatement("select sum(enum) as f from einfo  where etno=2;");
-
-            rs=ps.executeQuery();
-            while (rs.next()){
-                arr[5]=rs.getString("f");
-            }
-
-            ps= conn.prepareStatement("select sum(enum) as g from einfo  where etno=3;");
-
-            rs=ps.executeQuery();
-            while (rs.next()){
-                arr[6]=rs.getString("g");
-            }
-
-            ps= conn.prepareStatement("select sum(enum) as h from einfo  where etno=4;");
-
-            rs=ps.executeQuery();
-            while (rs.next()){
-                arr[6]=rs.getString("h");
-            }
 
 
         } catch (Exception e) {

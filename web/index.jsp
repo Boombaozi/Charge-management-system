@@ -120,7 +120,7 @@
                 </li>
 
                 <li>
-                    <a class="" href="m-e.jsp">
+                    <a class="" href="${pageContext.request.contextPath}/web/elist">
                         <span class="glyphicon glyphicon-edit"></span>业务员管理
                     </a>
                 </li>

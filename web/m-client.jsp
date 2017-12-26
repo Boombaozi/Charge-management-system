@@ -243,22 +243,25 @@
 							<div class="panel-body">
 
 
-								<form role="form" action="${pageContext.request.contextPath }/web/etypeadd" method="post">
-									<fieldset>
+								<form role="form" action="${pageContext.request.contextPath }/web/clientadd" method="post">
+
 										<div class="form-group">
-											<input class="form-control" placeholder="序号" name="etno" type="text" >
+											<input class="form-control" placeholder="客户号" name="cno" type="text" >
 										</div>
 										<div class="form-group">
-											<input class="form-control" placeholder="名称" name="etname" type="text" >
+											<input class="form-control" placeholder="姓名" name="cname" type="text" >
 										</div>
 										<div class="form-group">
-											<input class="form-control" placeholder="单价" name="price" type="text" >
+											<input class="form-control" placeholder="地址" name="addr" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="联系电话" name="ctel" type="text" >
 										</div>
 
 
 										<input type="submit" class="btn btn-primary" value="增加">
 
-									</fieldset>
+
 								</form>
 
 
@@ -295,16 +298,16 @@
 							<div class="panel-body">
 
 
-								<form role="form" action="${pageContext.request.contextPath }/web/etypedelete" method="post">
-									<fieldset>
+								<form role="form" action="${pageContext.request.contextPath }/web/clientdelete" method="post">
+
 										<div class="form-group">
-											<input class="form-control" placeholder="序号" name="etno" type="text" >
+											<input class="form-control" placeholder="客户号" name="cno" type="text" >
 										</div>
 
 
 										<input type="submit" class="btn btn-primary" value="删除">
 
-									</fieldset>
+
 								</form>
 
 
@@ -342,22 +345,25 @@
 							<div class="panel-body">
 
 
-								<form role="form" action="${pageContext.request.contextPath }/web/etypeupdata" method="post">
-									<fieldset>
+								<form role="form" action="${pageContext.request.contextPath }/web/clientupdate" method="post">
+
 										<div class="form-group">
-											<input class="form-control" placeholder="序号" name="etno" type="text" >
+											<input class="form-control" placeholder="客户号" name="cno" type="text" >
 										</div>
 										<div class="form-group">
-											<input class="form-control" placeholder="名称" name="etname" type="text" >
+											<input class="form-control" placeholder="姓名" name="cname" type="text" >
 										</div>
 										<div class="form-group">
-											<input class="form-control" placeholder="单价" name="price" type="text" >
+											<input class="form-control" placeholder="地址" name="addr" type="text" >
 										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="联系电话" name="ctel" type="text" >
+										</div>
+										6
 
 
 										<input type="submit" class="btn btn-primary" value="更改">
 
-									</fieldset>
 								</form>
 
 

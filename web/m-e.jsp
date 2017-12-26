@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+'/';
@@ -195,20 +197,21 @@
 
 					<thead>
 					<tr>
-						<th>序号</th>
-						<th>类型</th>
-						<th>单价</th>
+						<th>员工号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>联系方式</th>
 						<th>最后修改时间</th>
 					</tr>
 					</thead>
 					<tbody>
-					<c:forEach items="${etypelist}" var="et">
+					<c:forEach items="${em}" var="em">
 						<tr>
-							<td>${et.etno}</td>
-							<td>${et.etname}</td>
-							<td>${et.price}</td>
-							<td>${et.create_at}</td>
-							<td>b</td>
+							<td>${em.eno}</td>
+							<td>${em.name}</td>
+							<td>${em.sex}</td>
+							<td>${em.etel}</td>
+							<td>${em.create_at}</td>
 						</tr>
 					</c:forEach>
 					</tbody>
@@ -235,26 +238,28 @@
 					</div>
 					<div class="modal-body">
 						<div class="login-panel panel panel-default">
-							<div class="panel-heading">添加用电类型</div>
+							<div class="panel-heading">添加业务员</div>
 							<div class="panel-body">
 
 
-								<form role="form" action="${pageContext.request.contextPath }/web/etypeadd" method="post">
-									<fieldset>
-										<div class="form-group">
-											<input class="form-control" placeholder="序号" name="etno" type="text" >
-										</div>
-										<div class="form-group">
-											<input class="form-control" placeholder="名称" name="etname" type="text" >
-										</div>
-										<div class="form-group">
-											<input class="form-control" placeholder="单价" name="price" type="text" >
-										</div>
+								<form role="form" action="${pageContext.request.contextPath }/web/eadd" method="post">
 
+										<div class="form-group">
+											<input class="form-control" placeholder="员工号" name="eno" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="姓名" name="name" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="性别" name="sex" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="联系方式" name="etel" type="text" >
+										</div>
 
 										<input type="submit" class="btn btn-primary" value="增加">
 
-									</fieldset>
+
 								</form>
 
 
@@ -291,10 +296,10 @@
 							<div class="panel-body">
 
 
-								<form role="form" action="${pageContext.request.contextPath }/web/etypedelete" method="post">
+								<form role="form" action="${pageContext.request.contextPath }/web/edelete" method="post">
 									<fieldset>
 										<div class="form-group">
-											<input class="form-control" placeholder="序号" name="etno" type="text" >
+											<input class="form-control" placeholder="员工编号" name="eno" type="text" >
 										</div>
 
 
@@ -338,22 +343,24 @@
 							<div class="panel-body">
 
 
-								<form role="form" action="${pageContext.request.contextPath }/web/etypeupdata" method="post">
-									<fieldset>
-										<div class="form-group">
-											<input class="form-control" placeholder="序号" name="etno" type="text" >
-										</div>
-										<div class="form-group">
-											<input class="form-control" placeholder="名称" name="etname" type="text" >
-										</div>
-										<div class="form-group">
-											<input class="form-control" placeholder="单价" name="price" type="text" >
-										</div>
+								<form role="form" action="${pageContext.request.contextPath }/web/eupdate" method="post">
 
+										<div class="form-group">
+											<input class="form-control" placeholder="员工号" name="eno" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="姓名" name="name" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="性别" name="sex" type="text" >
+										</div>
+										<div class="form-group">
+											<input class="form-control" placeholder="联系方式" name="etel" type="text" >
+										</div>
 
 										<input type="submit" class="btn btn-primary" value="更改">
 
-									</fieldset>
+
 								</form>
 
 

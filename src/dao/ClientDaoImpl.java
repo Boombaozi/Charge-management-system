@@ -25,8 +25,8 @@ public class ClientDaoImpl implements ClientDao {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
 
 
-        qr.update("INSERT INTO dbwork.client VALUES(?,?,?,?,?,current_timestamp)",
-                client.getCno(),client.getCname(),client.getAddr(),client.getCtel(),client.getMoney());
+        qr.update("INSERT INTO dbwork.client VALUES(?,?,?,?,0,current_timestamp)",
+                client.getCno(),client.getCname(),client.getAddr(),client.getCtel());
 
     }
 

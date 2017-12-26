@@ -255,4 +255,80 @@
         <servlet-name>ClientList</servlet-name>
         <url-pattern>/web/clientlist</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ClientAdd</servlet-name>
+        <servlet-class>webservlet.Client.ClientAdd</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientAdd</servlet-name>
+        <url-pattern>/web/clientadd</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ClientDelete</servlet-name>
+        <servlet-class>webservlet.Client.ClientDelete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientDelete</servlet-name>
+        <url-pattern>/web/clientdelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientUpdate</servlet-name>
+        <servlet-class>webservlet.Client.ClientUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientUpdate</servlet-name>
+        <url-pattern>/web/clientupdate</url-pattern>
+    </servlet-mapping>
+
+
+    <!--clientlist-->
+    <servlet>
+        <servlet-name>EList</servlet-name>
+        <servlet-class>webservlet.E.EList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EList</servlet-name>
+        <url-pattern>/web/elist</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EAdd</servlet-name>
+        <servlet-class>webservlet.E.EAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EAdd</servlet-name>
+        <url-pattern>/web/eadd</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>EDelete</servlet-name>
+        <servlet-class>webservlet.E.EDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EDelete</servlet-name>
+        <url-pattern>/web/edelete</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>EUpdate</servlet-name>
+        <servlet-class>webservlet.E.EUpdate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EUpdate</servlet-name>
+        <url-pattern>/web/eupdate</url-pattern>
+    </servlet-mapping>
+
 </web-app>

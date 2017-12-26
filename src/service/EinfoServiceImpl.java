@@ -26,6 +26,10 @@ public class EinfoServiceImpl implements EinfoService {
 
     @Override
     public void addEinfo1(Einfo einfo) {
+
+
+
+
         try {
             einfoDao.addEinfo(einfo);
         } catch (SQLException e) {
