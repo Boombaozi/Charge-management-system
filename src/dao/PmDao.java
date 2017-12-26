@@ -13,4 +13,8 @@ public interface PmDao {
     public void updatePmsign(Pm p) throws SQLException;
 
     public Pm findPmById(Pm p) throws SQLException;
+
+    public void updatePm(Pm p) throws SQLException;
+
+
 }

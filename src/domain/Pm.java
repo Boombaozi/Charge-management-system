@@ -2,7 +2,7 @@ package domain;
 
 
 import java.sql.Timestamp;
-import java.util.Date;
+import java.sql.Date;
 
 public class Pm {
     private String cno;

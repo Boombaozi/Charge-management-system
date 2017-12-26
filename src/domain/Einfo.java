@@ -8,8 +8,9 @@ public class Einfo {
     private String cno;
     private Date date;
     private String etno;
-    private int  eenum;
-    private Timestamp create_at ;
+    private int eenum;
+    private Timestamp create_at;
+
 
     public int getEenum() {
         return eenum;

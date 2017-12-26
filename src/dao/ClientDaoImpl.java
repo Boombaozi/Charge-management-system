@@ -16,7 +16,7 @@ public class ClientDaoImpl implements ClientDao {
     public List<client> findAllClient() throws SQLException {
 
             QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-            return qr.query("select * from dbwork.client order by etno", new BeanListHandler<client>(client.class));
+            return qr.query("select * from dbwork.client", new BeanListHandler<client>(client.class));
 
     }
 

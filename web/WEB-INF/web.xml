@@ -139,7 +139,6 @@
     </servlet-mapping>
 
 
-
     <servlet>
         <servlet-name>CrDelete</servlet-name>
         <servlet-class>webservlet.Cr.CrDelete</servlet-class>
@@ -148,5 +147,112 @@
     <servlet-mapping>
         <servlet-name>CrDelete</servlet-name>
         <url-pattern>/web/crdelete</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <!--einfolist-->
+    <servlet>
+        <servlet-name>EinfoList</servlet-name>
+        <servlet-class>webservlet.Einfo.EinfoList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EinfoList</servlet-name>
+        <url-pattern>/web/einfolist</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>EinfoAdd</servlet-name>
+        <servlet-class>webservlet.Einfo.EinfoAdd</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EinfoAdd</servlet-name>
+        <url-pattern>/web/einfoadd</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>EinfoDelete</servlet-name>
+        <servlet-class>webservlet.Einfo.EinfoDelete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EinfoDelete</servlet-name>
+        <url-pattern>/web/einfodelete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EinfoUpdate</servlet-name>
+        <servlet-class>webservlet.Einfo.EinfoUpdate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EinfoUpdate</servlet-name>
+        <url-pattern>/web/einfoupdate</url-pattern>
+    </servlet-mapping>
+
+
+    <!--pmlist-->
+    <servlet>
+        <servlet-name>PmList</servlet-name>
+        <servlet-class>webservlet.Pm.PmList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PmList</servlet-name>
+        <url-pattern>/web/pmlist</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PmAdd</servlet-name>
+        <servlet-class>webservlet.Pm.PmAdd</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PmAdd</servlet-name>
+        <url-pattern>/web/pmadd</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PmDelete</servlet-name>
+        <servlet-class>webservlet.Pm.PmDelete</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PmDelete</servlet-name>
+        <url-pattern>/web/pmdelete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PmUpdate</servlet-name>
+        <servlet-class>webservlet.Pm.PmUpdate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PmUpdate</servlet-name>
+        <url-pattern>/web/pmupdate</url-pattern>
+    </servlet-mapping>
+
+
+    <!--clientlist-->
+    <servlet>
+        <servlet-name>ClientList</servlet-name>
+        <servlet-class>webservlet.Client.ClientList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientList</servlet-name>
+        <url-pattern>/web/clientlist</url-pattern>
     </servlet-mapping>
 </web-app>

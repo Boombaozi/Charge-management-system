@@ -24,8 +24,8 @@ public class PmDaoImpl implements PmDao {
         QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
 
 
-        qr.update("INSERT INTO dbwork.pm VALUES(?,?,?,?,current_timestamp)",
-                p.getCno(),p.getDate(),p.getCharge(),p.getSign());
+        qr.update("INSERT INTO dbwork.pm VALUES(?,?,?,'未收',current_timestamp)",
+                p.getCno(),p.getDate(),p.getCharge());
 
     }
 
@@ -51,4 +51,14 @@ public class PmDaoImpl implements PmDao {
 
 
     }
+
+    @Override
+    public void updatePm(Pm p) throws SQLException {
+        QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
+        qr.update("update pm set  charge=?,sign=? where cno=? and date=?",
+               p.getCharge(), p.getSign(),p.getCno(),p.getDate());
+
+    }
+
+    
 }

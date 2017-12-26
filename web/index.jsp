@@ -114,7 +114,7 @@
             </a>
             <ul class="children collapse" id="sub-item-2">
                 <li>
-                    <a class="" href="m-client.jsp">
+                    <a class="" href="${pageContext.request.contextPath}/web/clientlist">
                         <span class="glyphicon glyphicon-edit"></span>客户信息管理
                     </a>
                 </li>
@@ -125,12 +125,12 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="m-einfo.jsp">
+                    <a class="" href="${pageContext.request.contextPath}/web/einfolist">
                         <span class="glyphicon glyphicon-edit"></span>客户用电信息管理
                     </a>
                 </li>
                 <li>
-                    <a class="" href="m-pm.jsp">
+                    <a class="" href="${pageContext.request.contextPath}/web/pmlist">
                         <span class="glyphicon glyphicon-edit"></span>客户用电费用管理
                     </a>
                 </li>
@@ -174,12 +174,20 @@
     </div><!--/.row-->
 
     <!--网页内容！！！！-->
+     <c:cath>
         <%
       String[] arr=new String[31];
+
       	my.info a= new info();
       		arr=a.getinfo(request,response);
-      			%>
 
+
+        int[] arr2 =new int[31];
+        arr2=a.getinfo1(request,response);
+
+
+      			%>
+     </c:cath>
 
     <div class="row">
         <div class="col-lg-12">
@@ -223,7 +231,7 @@
                         <em class="glyphicon glyphicon-ok glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">0</div>
+                        <div class="large"><%out.write(arr[2]);%> </div>
                         <div class="text-muted"><strong>已缴费用户</strong></div>
                     </div>
                 </div>
@@ -238,7 +246,7 @@
                         <em class="glyphicon glyphicon-remove glyphicon-l"></em>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">0</div>
+                        <div class="large"><%out.write(arr[3]);%></div>
                         <div class="text-muted"><strong>未交费用户</strong></div>
                     </div>
                 </div>
@@ -247,6 +255,9 @@
     </div><!--/.row-->
 
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+
+
 
     <div class="row">
 
@@ -268,10 +279,10 @@
                     radius: '85%',
                     roseType: 'angle',
                     data:[
-                        {value:235, name:''},
-                        {value:274, name:'联盟广告'},
-                        {value:310, name:'邮件营销'},
-                        {value:335, name:'直接访问'},
+                        {value:<%=arr2[4]%>, name:'住宅用电<%=arr2[4]%>度'},
+                        {value:<%=arr2[5]%>, name:'商业用电<%=arr2[5]%>度'},
+                        {value:<%=arr2[6]%>, name:'工业用电<%=arr2[6]%>度'},
+                        {value:<%=arr2[7]%>, name:'农业用电<%=arr2[7]%>度'},
 
                     ]
                 }
@@ -279,14 +290,14 @@
         };
         option2 = {
             title: {
-                text: '未来一周气温变化',
-                subtext: '纯属虚构'
+                text: '近几月用电变化',
+
             },
             tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['最高气温','最低气温']
+                data:['总用电量','住宅用电']
             },
             toolbox: {
                 show: true,
@@ -303,38 +314,37 @@
             xAxis:  {
                 type: 'category',
                 boundaryGap: false,
-                data: ['周一','周二','周三','周四','周五','周六','周日']
+                data: ['5月','6月','7月','8月','9月','10月','11月']
             },
             yAxis: {
                 type: 'value',
                 axisLabel: {
-                    formatter: '{value} °C'
+                    formatter: '{value} 度'
                 }
             },
             series: [
                 {
-                    name:'最高气温',
+                    name:'总用电量',
                     type:'line',
-                    data:[11, 11, 15, 13, 12, 13, 10],
+                    data:[1100, 1000, 850, 1300, 1200, 1300, 800],
                     markPoint: {
                         data: [
-                            {type: 'max', name: '最大值'},
-                            {type: 'min', name: '最小值'}
+
                         ]
                     },
                     markLine: {
                         data: [
-                            {type: 'average', name: '平均值'}
+
                         ]
                     }
                 },
                 {
-                    name:'最低气温',
+                    name:'住宅用电',
                     type:'line',
-                    data:[1, -2, 2, 5, 3, 2, 0],
+                    data:[100, 200, 200, 500, 300, 200, 1000],
                     markPoint: {
                         data: [
-                            {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+
                         ]
                     },
                     markLine: {

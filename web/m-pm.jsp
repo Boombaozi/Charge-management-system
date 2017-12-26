@@ -1,8 +1,8 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" pageEncoding="UTF-8" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+'/';
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + '/';
 %>
 
 
@@ -14,7 +14,7 @@
 
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <title>电力公司收费管理信息系统</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -46,7 +47,8 @@
             <a class="navbar-brand" href="#"><span>Charge</span>system</a>
             <ul class="user-menu">
                 <li class="dropdown pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>管理员<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span>管理员<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 
                         <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li>
@@ -58,8 +60,6 @@
 </nav>
 
 
-
-
 <!--这是搜索栏-->
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <form role="search">
@@ -69,19 +69,19 @@
     </form>
 
 
-
     <!--这是菜单列表-->
     <ul class="nav menu">
 
-        <li ><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
+        <li><a href="index.jsp"><span class="glyphicon glyphicon-stats"></span> 系统概况</a></li>
 
-        <li ><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
-
+        <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> 收费登记</a></li>
 
 
         <li class="parent ">
             <a href="#">
-                <span class="glyphicon glyphicon-list"></span>缴费情况<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span>
+                <span class="glyphicon glyphicon-list"></span>缴费情况<span data-toggle="collapse" href="#sub-item-1"
+                                                                        class="icon pull-right"><em
+                    class="glyphicon glyphicon-s glyphicon-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li>
@@ -106,10 +106,11 @@
         </li>
 
 
-
         <li class="parent active">
             <a href="#">
-                <span class="glyphicon glyphicon-cog"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span>
+                <span class="glyphicon glyphicon-cog"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2"
+                                                                         class="icon pull-right"><em
+                    class="glyphicon glyphicon-s glyphicon-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-2">
                 <li>
@@ -151,12 +152,9 @@
         <li><a href="reg.jsp"><span class="glyphicon glyphicon-plus"></span>新增管理员</a></li>
 
 
-
-
         <li><a><span></span></a></li>
 
     </ul>
-
 
 
     <div class="attribution">电力公司收费管理信息系统</div>
@@ -167,7 +165,7 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-            <li class="active">系统状态信息</li>
+            <li class="active">费用管理</li>
         </ol>
     </div><!--/.row-->
 
@@ -175,7 +173,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">用电类型管理</h1>
+            <h1 class="page-header">用电费用管理</h1>
         </div>
     </div><!--/.row-->
 
@@ -185,9 +183,14 @@
         <div class="panel-heading">
             <!--表格头部-->
             <div class="pull-left">
-                <button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#add">New</button>
-                <button class="btn btn-primary glyphicon glyphicon-upload"data-toggle="modal" data-target="#updata">update</button>
-                <button class="btn btn-danger glyphicon glyphicon-trash"data-toggle="modal" data-target="#delete">Delete</button>
+                <button class="btn btn-success glyphicon glyphicon-plus" data-toggle="modal" data-target="#add">New
+                </button>
+                <button class="btn btn-primary glyphicon glyphicon-upload" data-toggle="modal" data-target="#updata">
+                    update
+                </button>
+                <button class="btn btn-danger glyphicon glyphicon-trash" data-toggle="modal" data-target="#delete">
+                    Delete
+                </button>
             </div>
         </div>
 
@@ -197,20 +200,21 @@
 
                 <thead>
                 <tr>
-                    <th>序号</th>
-                    <th>类型</th>
-                    <th>单价</th>
+                    <th>客户号</th>
+                    <th>日期</th>
+                    <th>费用</th>
+                    <th>是否结算</th>
                     <th>最后修改时间</th>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${etypelist}" var="et">
+                <c:forEach items="${pmlist}" var="pm">
                     <tr>
-                        <td>${et.etno}</td>
-                        <td>${et.etname}</td>
-                        <td>${et.price}</td>
-                        <td>${et.create_at}</td>
-                        <td>b</td>
+                        <td>${pm.cno}</td>
+                        <td>${pm.date}</td>
+                        <td>${pm.charge}</td>
+                        <td>${pm.sign}</td>
+                        <td>${pm.create_at}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -222,7 +226,6 @@
 
     </div>
     <!--表格主体结束-->
-
 
 
     <!--添加功能弹出狂主体-->
@@ -237,26 +240,26 @@
                 </div>
                 <div class="modal-body">
                     <div class="login-panel panel panel-default">
-                        <div class="panel-heading">添加用电类型</div>
+                        <div class="panel-heading">添加用电费用</div>
                         <div class="panel-body">
 
 
-                            <form role="form" action="${pageContext.request.contextPath }/web/etypeadd" method="post">
-                                <fieldset>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="序号" name="etno" type="text" >
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="名称" name="etname" type="text" >
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="单价" name="price" type="text" >
-                                    </div>
+                            <form role="form" action="${pageContext.request.contextPath}/web/pmadd" method="post">
+
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="客户号" name="cno" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="时间" name="date" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="费用" name="charge" type="text">
+                                </div>
 
 
-                                    <input type="submit" class="btn btn-primary" value="增加">
+                                <input type="submit" class="btn btn-primary" value="增加">
 
-                                </fieldset>
+
                             </form>
 
 
@@ -264,12 +267,10 @@
                     </div>
 
 
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+
                 </div>
             </div>
         </div>
@@ -293,23 +294,22 @@
                         <div class="panel-body">
 
 
-                            <form role="form" action="${pageContext.request.contextPath }/web/etypedelete" method="post">
-                                <fieldset>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="序号" name="etno" type="text" >
-                                    </div>
+                            <form role="form" action="${pageContext.request.contextPath }/web/pmdelete" method="post">
 
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="客户" name="cno" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="日期" name="date" type="text">
+                                </div>
 
-                                    <input type="submit" class="btn btn-primary" value="删除">
+                                <input type="submit" class="btn btn-primary" value="删除">
 
-                                </fieldset>
                             </form>
 
 
                         </div>
                     </div>
-
-
 
 
                 </div>
@@ -340,29 +340,29 @@
                         <div class="panel-body">
 
 
-                            <form role="form" action="${pageContext.request.contextPath }/web/etypeupdata" method="post">
-                                <fieldset>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="序号" name="etno" type="text" >
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="名称" name="etname" type="text" >
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="单价" name="price" type="text" >
-                                    </div>
+                            <form role="form" action="${pageContext.request.contextPath }/web/pmupdate" method="post">
+
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="序号" name="cno" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="日期" name="date" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="费用" name="charge" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="标志" name="sign" type="text">
+                                </div>
+
+                                <input type="submit" class="btn btn-primary" value="更改">
 
 
-                                    <input type="submit" class="btn btn-primary" value="更改">
-
-                                </fieldset>
                             </form>
 
 
                         </div>
                     </div>
-
-
 
 
                 </div>
@@ -385,11 +385,10 @@
 <script src="js/easypiechart-data.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script>
-    $('#calendar').datepicker({
-    });
+    $('#calendar').datepicker({});
 
     !function ($) {
-        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
             $(this).find('em:first').toggleClass("glyphicon-minus");
         });
         $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
