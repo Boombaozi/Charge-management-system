@@ -109,23 +109,23 @@
 				</a>
 				<ul class="children collapse" id="sub-item-2">
 					<li>
-						<a class="" href="m-client.jsp">
+						<a class="" href="${pageContext.request.contextPath}/web/clientlist">
 							<span class="glyphicon glyphicon-edit"></span>客户信息管理
 						</a>
 					</li>
 
 					<li>
-						<a class="" href="m-e.jsp">
+						<a class="" href="${pageContext.request.contextPath}/web/elist">
 							<span class="glyphicon glyphicon-edit"></span>业务员管理
 						</a>
 					</li>
 					<li>
-						<a class="" href="m-einfo.jsp">
+						<a class="" href="${pageContext.request.contextPath}/web/einfolist">
 							<span class="glyphicon glyphicon-edit"></span>客户用电信息管理
 						</a>
 					</li>
 					<li>
-						<a class="" href="m-pm.jsp">
+						<a class="" href="${pageContext.request.contextPath}/web/pmlist">
 							<span class="glyphicon glyphicon-edit"></span>客户用电费用管理
 						</a>
 					</li>

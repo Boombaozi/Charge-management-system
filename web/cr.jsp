@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.sql.Date" %>
-<%@ page import="java.util.Arrays" %>
+<%@ page import="my.info" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + '/';
@@ -112,23 +112,23 @@
                 </a>
                 <ul class="children collapse" id="sub-item-2">
                     <li>
-                        <a class="" href="m-client.jsp">
+                        <a class="" href="${pageContext.request.contextPath}/web/clientlist">
                             <span class="glyphicon glyphicon-edit"></span>客户信息管理
                         </a>
                     </li>
 
                     <li>
-                        <a class="" href="m-e.jsp">
+                        <a class="" href="${pageContext.request.contextPath}/web/elist">
                             <span class="glyphicon glyphicon-edit"></span>业务员管理
                         </a>
                     </li>
                     <li>
-                        <a class="" href="m-einfo.jsp">
+                        <a class="" href="${pageContext.request.contextPath}/web/einfolist">
                             <span class="glyphicon glyphicon-edit"></span>客户用电信息管理
                         </a>
                     </li>
                     <li>
-                        <a class="" href="m-pm.jsp">
+                        <a class="" href="${pageContext.request.contextPath}/web/pmlist">
                             <span class="glyphicon glyphicon-edit"></span>客户用电费用管理
                         </a>
                     </li>
@@ -174,12 +174,49 @@
 
         <!--网页内容！！！！-->
 
+                <%
+  String[] arr=new String[31];
+
+      	my.info a= new info();
+
+      		arr=a.getinfo(request,response);
+
+
+
+
+%>
+
+
+
+
+
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">缴费</h1>
             </div>
 
         </div><!--/.row-->
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body easypiechart-panel">
+                        <h4>已缴费</h4>
+                        <div class="easypiechart" id="easypiechart-blue" data-percent="<%out.write(arr[4]);%>"><span class="percent"><%out.write(arr[4]);%></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body easypiechart-panel">
+                        <h4>正常用户</h4>
+                        <div class="easypiechart" id="easypiechart-orange" data-percent="<%out.write(arr[5]);%>" ><span class="percent"><%out.write(arr[5]);%></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         <div class="row">
 

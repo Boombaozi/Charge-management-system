@@ -1,7 +1,7 @@
 package servlet;
 
 import domain.Cr;
-import my.nowtime;
+
 import org.apache.commons.beanutils.BeanUtils;
 import service.MainImpl;
 

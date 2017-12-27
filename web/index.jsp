@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <%@ page import="my.*" %>
 
+
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + '/';
@@ -179,10 +180,12 @@
       String[] arr=new String[31];
 
       	my.info a= new info();
+
       		arr=a.getinfo(request,response);
 
 
         int[] arr2 =new int[31];
+
         arr2=a.getinfo1(request,response);
 
 
@@ -326,7 +329,7 @@
                 {
                     name:'总用电量',
                     type:'line',
-                    data:[1100, 1000, 850, 1300, 1200, 1300, 800],
+                    data:[0, 0,0, 0, 0, 0,0],
                     markPoint: {
                         data: [
 
@@ -341,7 +344,7 @@
                 {
                     name:'住宅用电',
                     type:'line',
-                    data:[100, 200, 200, 500, 300, 200, 1000],
+                    data:[0, 0, 0, 0, 0,0, 0],
                     markPoint: {
                         data: [
 
